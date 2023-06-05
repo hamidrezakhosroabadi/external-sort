@@ -18,8 +18,8 @@ To use this implementation, create an instance of the ExternalMergeSort class wi
 Then, call the do() method on the instance to perform the external merge sort.
 python
 
-ems = ExternalMergeSort("unsorted.txt", "sorted.txt", "temp", 1000)
-ems.do()
+    ems = ExternalMergeSort("unsorted.txt", "sorted.txt", "temp", 1000)
+    ems.do()
 
 Note that the ExternalMergeSort class is intended to be used with text files containing only numeric data. If the file contains non-numeric data or if the file ends with an empty line, an exception will be raised.
 
@@ -29,7 +29,7 @@ The code consists of two classes: LinePointer and ExternalMergeSort.
 
 ## LinePointer
 
-The LinePointer class represents a pointer to a line in a file. It has the following methods:
+The LinePointer class represents a pointer to a line in a file. It has the following methods(including dunders):
 
     __init__(file): Initializes a new LinePointer object with the given file object.
     go_next(): Advances the pointer to the next line in the file.
@@ -41,7 +41,7 @@ The LinePointer class represents a pointer to a line in a file. It has the follo
 
 ## ExternalMergeSort
 
-The ExternalMergeSort class performs an external merge sort on a file. It has the following methods:
+The ExternalMergeSort class performs an external merge sort on a file. It has the following methods(including dunders):
 
     __init__(target_file, result_file, temp_dir, chunk_size): Initializes a new ExternalMergeSort object.
     __write_lines(lines, target_file): Writes a list of lines to a file.
@@ -55,3 +55,5 @@ The ExternalMergeSort class performs an external merge sort on a file. It has th
 # Limitations
 
 The code has been tested on small and medium-sized text files. However, it may not be efficient for very large files. Additionally, the implementation assumes that the input file contains only numeric data and does not handle other data types.
+
+##### The README.md was written by ChatGPT.
